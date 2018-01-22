@@ -1,0 +1,11 @@
+C:\Users\user\Documents\Visual Studio 2017\Projects\News-service\News-service\bin\Debug\netcoreapp2.0\News-service.deps.json
+C:\Users\user\Documents\Visual Studio 2017\Projects\News-service\News-service\bin\Debug\netcoreapp2.0\News-service.runtimeconfig.json
+C:\Users\user\Documents\Visual Studio 2017\Projects\News-service\News-service\bin\Debug\netcoreapp2.0\News-service.runtimeconfig.dev.json
+C:\Users\user\Documents\Visual Studio 2017\Projects\News-service\News-service\bin\Debug\netcoreapp2.0\News-service.dll
+C:\Users\user\Documents\Visual Studio 2017\Projects\News-service\News-service\obj\Debug\netcoreapp2.0\News-service.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\News-service\News-service\obj\Debug\netcoreapp2.0\News-service.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\News-service\News-service\obj\Debug\netcoreapp2.0\News-service.AssemblyInfoInputs.cache
+C:\Users\user\Documents\Visual Studio 2017\Projects\News-service\News-service\obj\Debug\netcoreapp2.0\News-service.AssemblyInfo.cs
+C:\Users\user\Documents\Visual Studio 2017\Projects\News-service\News-service\bin\Debug\netcoreapp2.0\News-service.pdb
+C:\Users\user\Documents\Visual Studio 2017\Projects\News-service\News-service\obj\Debug\netcoreapp2.0\News-service.dll
+C:\Users\user\Documents\Visual Studio 2017\Projects\News-service\News-service\obj\Debug\netcoreapp2.0\News-service.pdb

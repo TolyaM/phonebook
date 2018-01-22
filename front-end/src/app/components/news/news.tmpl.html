@@ -1,0 +1,90 @@
+
+<aside id="aside">
+    <div class="logo">
+        <img  class="icon" ng-src="{{logo}}"/>
+    </div>
+
+    <p class="title">Phone Book</p>
+    <nav>
+        <ul>
+            <li data-state="users" ><a ui-sref="users"><span>Users</span></a></li>
+            <li data-state="news" ui-sref-active="active"><a ui-sref="news"><span>News</span></a></li>
+        </ul>
+    </nav>
+</aside>
+
+<div class="maincontainer">
+
+    <div class="content">
+        <header>
+            <button class="menu-trigger" ng-click="menutrigger()">
+                <img  class="icon" ng-src="{{menu}}"/>
+            </button>
+            <ul class="actions">
+                <li>
+                    <a ui-sref="user ({ userId: employee.id })">
+                        <img class="thumb" ng-src="{{employee.photoUrl}}{{tokenUrl}}" alt="Profile Picture">
+                    </a>
+                </li>
+                <li class="logout">
+                    <a ui-sref="logout">
+                        <img  class="icon" ng-src="{{logout}}"/>
+                    </a>
+                </li>
+            </ul>
+        </header>
+
+        <ul class="button-group">
+            <input type="button" class="{{tab == 'Important' ? 'button active': 'button'}}" ng-click="Important()" value="Important">
+            <input type="button" class="{{tab == 'Daily' ? 'button active': 'button'}}" ng-click="Daily()" value="Daily">
+        </ul>
+
+        <div class="inherit"></div>
+
+        <div class="head">
+            <h1 class="page-title">News</h1>
+            <a ui-sref="newsadd" class="button transparent" ng-show="currentuser.role == 'admin'">Add News</a>
+
+            <div class="form-group inside">
+                <input type="text" name="" placeholder="Search…" style = "border-color: #cccccc" ng-model="searchKey">
+                <button class="button">
+                    <img  class="icon" ng-src="{{search}}"/>
+                </button>
+            </div>
+        </div>
+
+        <div class="news-article" id="CurrentNews" dir-paginate = "newse in news | filter: searchKey | orderBy: '-dateCreate' | itemsPerPage: 2 track by $index">
+            <span class="date">{{newse.dateCreate | date:'MMMM d, yyyy'}}</span>
+            <h2>{{newse.heading}}</h2>
+
+            <article ng-class="expand">
+                <text ng-bind-html="newse.text">
+                    <button class="expand" ng-show="expand!='expanded' ? newse.text.length > 2 : false" ng-click="expands = 'expanded'"><span>Expand</span></button>
+                </text>
+            </article>
+
+            <div class="article-actions" ng-show="currentuser.role == 'admin'">
+                <a class="action" ui-sref="newsedit({ newseditId: newse.id })">
+                    <img  class="icon" ng-src="{{edit}}"/>
+                </a>
+                <button class="action" ng-click="deleteNews($index, newse.id)">
+                    <img  class="icon" ng-src="{{deletesvg}}"/>
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+            <dir-pagination-controls
+                class="bootstrap-w"
+                max-size = "10"
+                direction-links = "true"
+                border-links = "true" >
+            </dir-pagination-controls>
+    </footer>
+</div>
+
+<div class="page-overlay" id="pageoverlay" ng-click="pageoverlay()">
+    <button class="close">
+        <img  class="icon" ng-src="{{close}}"/>
+    </button>
+</div>

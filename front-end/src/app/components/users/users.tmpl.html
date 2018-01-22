@@ -1,0 +1,97 @@
+<div>
+<aside id="aside">
+    <div class="logo">
+        <img  class="icon" ng-src="{{logo}}"/>
+    </div>
+    <p class="title">Phone Book</p>
+    <nav>
+        <ul>
+            <li data-state="users"><a ui-sref="users"><span>Users</span></a></li>
+            <li data-state="news"><a ui-sref="news"><span>News</span></a></li>
+        </ul>
+    </nav>
+</aside>
+</div>
+
+<div class="maincontainer">
+    <div class="content">
+        <div>
+            <header>
+                <button class="menu-trigger" ng-click="menutrigger()">
+                    <img  class="icon" ng-src="{{menu}}"/>
+                </button>
+
+                <ul class="actions">
+                    <li>
+                        <a ui-sref="user ({ userId: employee.id })">
+                            <img class="thumb" class="expand" ng-src="{{employee.photoUrl}}{{tokenUrl}}" alt="Profile Picture">
+                        </a>
+                    </li>
+                    <li class="logout">
+                        <a ui-sref="logout">
+                            <img  class="icon" ng-src="{{logout}}"/>
+                        </a>
+                    </li>
+                </ul>
+            </header>
+        </div>
+
+        <div class="head">
+            <h1 class="page-title">Users</h1>
+            <div class="form-group inside">
+                <input type="text" name="" placeholder="Search…" ng-model="searchKey" style = "border-color: #cccccc">
+                <button class="button">
+                    <img  class="icon" ng-src="{{search}}"/>
+                </button>
+                <div ng-repeat="user in users">{{user.name}}</div>
+            </div>
+        </div>
+
+        <table class="table hover users responsive">
+            <thead>
+                <tr>
+                    <th class="name">
+                        Name
+                    </th>
+                    <th class="position">
+                        Position
+                    </th>
+                    <th class="phone">
+                        Phone
+                    </th>
+                    <th class="email">
+                        Email
+                    </th>
+                    <th class="skype">
+                        Skype
+                    </th>
+                    <th class="room">
+                        Room
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody class="table">
+                <tr ng-repeat="user in users | filter: searchKey">
+                    <td class="name">
+                        <a class="thumb" ui-sref="user({ userId: user.id })"><div class="image">
+                            <img src="{{user.photoUrl}}{{tokenUrl}}"></div><span>  {{user.first_name}} {{user.last_name}}  </span>
+                        </a>
+                        <span class="smallLaptopScreen-visible">  {{user.position}}  </span>
+                    </td>
+                    <td class="position">  {{ user.position }}  </td>
+                    <td class="phone"><span class="caption">Phone</span><a href="tel:{{user.address.phone}}">  {{user.address.phone}}  </a></td>
+                    <td class="mail"><span class="caption">Email</span><a href="mailto:{{user.address.email}}">  {{user.address.email}}  </a></td>
+                    <td class="skype"><span class="caption">Skype</span><a href="tel: {{user.address.skype}}">  {{user.address.skype}}  </a></td>
+                    <td class="room"><span class="caption">Room</span>  {{user.address.room}}  </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="page-overlay" id="pageoverlay" ng-click="pageoverlay()">
+    <button class="close">
+        <img  class="icon" ng-src="{{close}}"/>
+    </button>
+</div>

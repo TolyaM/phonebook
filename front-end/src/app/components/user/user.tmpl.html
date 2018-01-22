@@ -1,0 +1,179 @@
+<div>
+    <aside id="aside">
+        <div class="logo">
+            <img  class="icon" ng-src="{{logo}}"/>
+        </div>
+        <p class="title">Phone Book</p>
+        <nav>
+            <ul>
+                <li data-state="users"><a ui-sref="users"><span>Users</span></a></li>
+                <li data-state="news"><a ui-sref="news"><span>News</span></a></li>
+            </ul>
+        </nav>
+    </aside>
+</div>
+
+<div class="maincontainer">
+    <div class="content">
+        <div>
+            <header>
+                <button class="menu-trigger" ng-click="menutrigger()">
+                    <img  class="icon" ng-src="{{menu}}"/>
+                </button>
+
+                <ul class="actions">
+                    <li>
+                        <a ui-sref="user({ userId: employee.id })">
+                            <img class="thumb" ng-src="{{employee.photoUrl}}{{tokenUrl}}" alt="Profile Picture">
+                        </a>
+                    </li>
+                    <li class="logout">
+                        <a ui-sref="logout">
+                            <img  class="icon" ng-src="{{logout}}"/>
+                        </a>
+                    </li>
+                </ul>
+            </header>
+        </div>
+
+        <div class="head">
+            <h1 class="page-title">View User</h1>
+        </div>
+
+        <div class="user-view" ng-show="currentuser.id != user.id && currentuser.role != 'admin'">
+            <h2>{{user.first_name}} {{user.last_name}}</h2>
+            <p>{{user.position}}</p>
+
+            <div class="image">
+                <div class="picture">
+                    <img ng-src="{{user.photoUrl}}{{tokenUrl}}" />
+                </div>
+            </div>
+
+            <div class="info">
+                <div class="form-group">
+                    <label>Email</label>
+                    <p><a href="mailto:{{address.email}}">{{address.email}}</a></p>
+                </div>
+
+                <div class="form-group">
+                    <label>Skype</label>
+                    <p><a href="tel:{{address.skype}}">{{address.skype}}</a></p>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone</label>
+                    <p><a href="tel:{{address.phone}}">{{address.phone}}</a></p>
+                </div>
+
+                <div class="form-group">
+                    <label>room</label>
+                    <p>{{address.room}}</p>
+                </div>
+
+                <div class="form-group">
+                    <label>Projects</label>
+                    <ul>
+                        <li>{{project.project_name}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <form name="profileForm">
+        <div class="user-view" ng-show="currentuser.role == 'admin' || currentuser.id == user.id">
+            <h2>
+                <label>First name</label>
+
+                <input id="first_name" type="text" name="first_name" ng-minlength="2" ng-maxlength="12" ng-model="user.first_name">
+
+                <label>Last name</label>
+                <input id="last_name" type="text" name="last_name" ng-minlength="2" ng-maxlength="12" ng-model="user.last_name">
+
+                <p ng-show="profileForm.position.$error.minlength" class="help-block">Title is too short.</p>
+                <p ng-show="profileForm.position.$error.maxlength" class="help-block">Title is too long.</p>
+            </h2>
+
+            <div class="image">
+                <div class="picture">
+                        <!-- <input type="file" on-change="addImage()"></input> -->
+                    <img ng-src="{{user.photoUrl}}{{tokenUrl}}" />
+                </div>
+            </div>
+
+            <div class="info">
+                <div class="form-group">
+                    <label>Position</label>
+                    <input id="position" type="text" name="position" ng-minlength="2" ng-maxlength="40" ng-model="user.position">
+                    <p ng-show="profileForm.position.$error.minlength" class="help-block">Title is too short.</p>
+                    <p ng-show="profileForm.position.$error.maxlength" class="help-block">Title is too long.</p>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input id="email" type="text" name="email" ng-model="address.email" ng-pattern="eml_add" required="true" placeholder="Email">
+                    <p><div ng-if="profileForm.email.$error.required && profileForm.email.$dirty">Enter the valid mail id</div></p>
+                </div>
+
+                <div class="form-group">
+                    <label>Skype</label>
+                    <input id="skype" type="text" name="skype" ng-minlength="4" ng-maxlength="15" ng-model="address.skype">
+                    <p ng-show="profileForm.skype.$error.minlength" class="help-block">Title is too short.</p>
+                    <p ng-show="profileForm.skype.$error.maxlength" class="help-block">Title is too long.</p>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input id="phone" ng-pattern="/^\+?[0-9]+$/" type="text" name="phone" ng-minlength="5" ng-maxlength="25" ng-model="address.phone">
+                    <p ng-show="profileForm.phone.$error.minlength" class="help-block">Title is too short.</p>
+                    <p ng-show="profileForm.phone.$error.maxlength" class="help-block">Title is too long.</p>
+                    <span ng-show="profileForm.phone.$error.pattern">The value is not a valid integer</span>
+                </div>
+
+                <div class="form-group">
+                    <label>room</label>
+                    <input id="room" ng-pattern="/^[0-9]+$/" type="text" name="room" ng-minlength="2" ng-maxlength="20" ng-model="address.room">
+                    <p ng-show="profileForm.room.$error.minlength" class="help-block">Title is too short.</p>
+                    <p ng-show="profileForm.room.$error.maxlength" class="help-block">Title is too long.</p>
+                    <p ng-show="profileForm.room.$error.pattern">The value is not a valid integer</p>
+                </div>
+                
+                <div class="form-group">
+                    <label>Projects</label>
+                    <table class="table">
+                        <tbody ng-repeat="item in projects track by $index">
+                            <tr>
+                                <td>
+                                    {{item.project_name}}
+                                </td>
+                                <td>
+                                    <button class="button" ng-click="deleteProject($index, item.id)">Delete</button>    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-group actions">
+                        <label>Add Project</label>
+                        <input id="addproject" placeholder="Project name" type="text" name="addproject" ng-minlength="4" ng-maxlength="40" ng-model="projects.project_name">
+                        <button class="button save" ng-show="profileForm.addproject" ng-click="addProject()">Add</button>
+                        <p ng-show="profileForm.addproject.$error.minlength" class="help-block">Project name is too short.</p>
+                        <p ng-show="profileForm.addproject.$error.maxlength" class="help-block">Project name is too long.</p>
+                        <p ng-show="errorMessage" class="help-block">{{errorMessage}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group actions">
+                <button class="button" ng-click="updateUser()" style="margin-top:2%">Save</button>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+
+<div class="page-overlay" id="pageoverlay" ng-click="pageoverlay()">
+    <button class="close">
+        <img  class="icon" ng-src="{{close}}"/>
+    </button>
+</div>

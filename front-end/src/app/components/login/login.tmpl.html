@@ -1,0 +1,36 @@
+<section class="login-section">
+
+    <form class="login-form-cover" name="loginForm" novalidate>
+        <div class="login-form">
+
+            <h1>Phone Book</h1>
+
+            <!-- USERNAME -->
+            <div class="form-group" ng-class="{ 'has-error' : loginForm.name.$invalid && !loginForm.name.$pristine }">
+                <label for="name">Name</label>
+                <input ng-model="name" id="name" type="text" name="name" ng-minlength="3" ng-maxlength="8" autofocus required>
+            <p ng-show="loginForm.name.$error.minlength" class="help-block">Username is too short.</p>
+            <p ng-show="loginForm.name.$error.maxlength" class="help-block">Username is too long.</p>
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="form-group" ng-class="{'has-error': loginForm.password.$invalid && loginForm.password.$dirty, 'has-success': loginForm.password.$valid}">
+                <label for="password">Password</label>
+                <input ng-model="password" id="password" type="password" name="password" ng-minlength="4" ng-maxlength="8" required>
+                <p ng-show="loginForm.password.$error.minlength" class="help-block">Length of password should be from 4 to 8.</p>
+                <p ng-show="loginForm.password.$error.maxlength" class="help-block">Length of password should be from 4 to 8</p>
+                <p ng-show="errorMessage" class="help-block">{{errorMessage}}</p>
+            </div>
+
+            <!-- LOGIN BUTTON -->
+            <div class="form-group">
+                <a ng-click="submit()" class="button" ng-disabled="loginForm.$invalid">Login</a>
+            </div>
+        </div>
+
+        <div class="brand-logo">
+            <img  class="icon" ng-src="{{logo}}"/>
+        </div>
+
+    </form>
+</section>

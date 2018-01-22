@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Gradle : spring-rest-service-oauth-master.war">
+    <output-path>$PROJECT_DIR$/../../spring-rest-service-oauth-master/build/libs</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$/../../spring-rest-service-oauth-master" />
+    </properties>
+    <root id="archive" name="spring-rest-service-oauth-master.war">
+      <element id="artifact" artifact-name="Gradle : spring-rest-service-oauth-master.war (exploded)" />
+    </root>
+  </artifact>
+</component>

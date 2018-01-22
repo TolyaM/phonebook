@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="auth" external.linked.project.path="$MODULE_DIR$/../../../../EKrylovich-rnd-demo-5cee24525fc9/auth" external.root.project.path="$MODULE_DIR$/../../../../EKrylovich-rnd-demo-5cee24525fc9/auth" external.system.id="GRADLE" external.system.module.group="" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../EKrylovich-rnd-demo-5cee24525fc9/auth">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../EKrylovich-rnd-demo-5cee24525fc9/auth/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../EKrylovich-rnd-demo-5cee24525fc9/auth/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../EKrylovich-rnd-demo-5cee24525fc9/auth/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

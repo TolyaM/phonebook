@@ -1,0 +1,17 @@
+info:
+  component: Zuul Server
+
+zuul:
+  ignoredServices: "*"
+  routes:
+    composite-service:
+      path: /productcomposite/**
+
+server:
+  port: 8765
+
+
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:9999/uaa/user

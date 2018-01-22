@@ -1,0 +1,33 @@
+info:
+  component: Zuul Server
+
+server:
+  port: 8950
+
+zuul:
+  ignoredServices: "*"
+  routes:
+    addresses-service:
+      path: /addresses/**
+    users-service:
+      path: /users/**
+    projects-service:
+      path: /projects/**
+    news-service:
+      path: /news/**
+
+
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:8850/uaa/user
+
+#security:
+#  oauth2:
+#    client:
+#       accessTokenUri: http://localhost:9999/uaa/oauth/token
+#       userAuthorizationUri: http://localhost:9999/uaa/oauth/authorize
+#       clientId: clientIdPassword
+#       clientSecret: secret
+#    resource:
+#        userInfoUri: http://localhost:9999/uaa/user

@@ -1,0 +1,70 @@
+<aside id="aside">
+    <div class="logo">
+        <img  class="icon" ng-src="{{logo}}"/>
+    </div>
+    <p class="title">Phone Book</p>
+    <nav>
+        <ul>
+            <li data-state="users"><a ui-sref="users"><span>Users</span></a></li>
+            <li data-state="news" ui-sref-active="active"><a ui-sref="news"><span>News</span></a></li>
+        </ul>
+    </nav>
+</aside>
+<div class="maincontainer">
+    <div class="content">
+        <header>
+            <button class="menu-trigger" ng-click="menutrigger()">
+                <img  class="icon" ng-src="{{menu}}"/>
+            </button>
+
+            <ul class="actions">
+                <li>
+                    <a ui-sref="user ({ userId: employee.id })">
+                        <img class="thumb" ng-src="{{employee.photoUrl}}{{tokenUrl}}" alt="Profile Picture">
+                    </a>
+                </li>
+                <li class="logout">
+                    <a ui-sref="logout">
+                        <img  class="icon" ng-src="{{logout}}"/>
+                    </a>
+                </li>
+            </ul>
+        </header>
+
+        <div class="head">
+            <h1 class="page-title">Create News</h1>
+        </div>
+        <form name="addForm">
+                <div>
+                    <input type="radio" ng-checked="!daily" ng-model="category" id="important" value="important"><label for="important">Important</label>
+
+                    <input type="radio" ng-model="category" id="daily" value="daily"><label for="daily">Daily</label>
+                </div>
+
+                <div class="edit-news">
+                    <div class="form-group title">
+                        <label for="title">Title</label>
+                        <input id="title" type="text" name="title" ng-minlength="5" ng-maxlength="200" ng-model="heading">
+                        <p ng-show="addForm.title.$error.minlength" class="help-block">Title is too short.</p>
+                        <p ng-show="addForm.title.$error.maxlength" class="help-block">Title is too long.</p>
+                    </div>
+                    <div class="form-group body bootstrap-w">
+                        <label>News</label>
+                        <text-angular ng-model="text" id="area" name="area" ng-minlength="5" ng-maxlength="2000"></text-angular>
+                        <p ng-show="addForm.area.$error.minlength" class="help-block">Title is too short.</p>
+                        <p ng-show="addForm.area.$error.maxlength" class="help-block">Title is too long.</p>
+                    </div>
+                    <div class="form-group actions">
+                        <button class="button save" ng-click="saveNews()">Save</button>
+                        <button class="button cancel" ui-sref="news">Cancel</button>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
+
+<div class="page-overlay" id="pageoverlay" ng-click="pageoverlay()">
+    <button class="close">
+        <img  class="icon" ng-src="{{close}}"/>
+    </button>
+</div>

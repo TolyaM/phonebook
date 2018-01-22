@@ -1,0 +1,51 @@
+input.ng-invalid {
+    border-color: pink;
+}
+input.ng-valid {
+    border-color: lightgreen;
+}
+
+/*была под стилями футера*/
+/*
+.login-section {
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/login-bg-3.jpg');
+    background-size: cover; }
+.login-section .login-form-cover {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    background: rgba(26, 26, 26, 0.9); }
+.login-section h1 {
+    text-align: center;
+    color: #333333; }
+.login-section .login-form {
+    width: 25em;
+    background-color: white;
+    margin: auto; }
+@media (max-width: 30em) {
+    .login-section .login-form {
+        width: 100%; } }
+.login-section .login-form .form-group {
+    padding: 0.625em 1.875em 0.625em 1.875em; }
+.login-section .login-form .form-group input {
+    width: 100%; }
+.login-section .login-form .form-group .button {
+    margin: auto -1.34375em -0.4375em -1.34375em;
+    padding: 0.625em;
+    font-size: 1.4rem; }
+.login-section .login-form .form-group:last-child {
+    padding-top: 2.5em; }
+.login-section .brand-logo {
+    align-self: flex-end;
+    width: 7.5em;
+    height: 1.875em;
+    margin: auto auto 0.9375em auto; }
+.login-section .brand-logo .icon {
+    width: 100%;
+    height: 100%;
+    fill: white; }*/

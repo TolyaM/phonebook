@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ForteGroupTask-edge-service.iml" filepath="$PROJECT_DIR$/.idea/modules/ForteGroupTask-edge-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth.iml" filepath="$PROJECT_DIR$/.idea/modules/auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth_main.iml" filepath="$PROJECT_DIR$/.idea/modules/auth_main.iml" group="auth" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth_test.iml" filepath="$PROJECT_DIR$/.idea/modules/auth_test.iml" group="auth" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/composite.iml" filepath="$PROJECT_DIR$/.idea/modules/composite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/composite_main.iml" filepath="$PROJECT_DIR$/.idea/modules/composite_main.iml" group="composite" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/composite_test.iml" filepath="$PROJECT_DIR$/.idea/modules/composite_test.iml" group="composite" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/discovery-service.iml" filepath="$PROJECT_DIR$/.idea/modules/discovery-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/discovery-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/discovery-service_main.iml" group="discovery-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/discovery-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/discovery-service_test.iml" group="discovery-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/edge-service.iml" filepath="$PROJECT_DIR$/.idea/modules/edge-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/edge-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/edge-service_main.iml" group="edge-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/edge-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/edge-service_test.iml" group="edge-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1764596698/news.iml" filepath="$PROJECT_DIR$/.idea/modules/-1764596698/news.iml" group="news" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/product.iml" filepath="$PROJECT_DIR$/.idea/modules/product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/product_main.iml" filepath="$PROJECT_DIR$/.idea/modules/product_main.iml" group="product" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/product_test.iml" filepath="$PROJECT_DIR$/.idea/modules/product_test.iml" group="product" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/recommentation.iml" filepath="$PROJECT_DIR$/.idea/modules/recommentation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/recommentation_main.iml" filepath="$PROJECT_DIR$/.idea/modules/recommentation_main.iml" group="recommentation" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/recommentation_test.iml" filepath="$PROJECT_DIR$/.idea/modules/recommentation_test.iml" group="recommentation" />
+      <module fileurl="file://$PROJECT_DIR$/../../Forte/spring-boot-hello-world-master/spring-boot-hello-world.iml" filepath="$PROJECT_DIR$/../../Forte/spring-boot-hello-world-master/spring-boot-hello-world.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/users.iml" filepath="$PROJECT_DIR$/.idea/modules/users.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/users_main.iml" filepath="$PROJECT_DIR$/.idea/modules/users_main.iml" group="users" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/users_test.iml" filepath="$PROJECT_DIR$/.idea/modules/users_test.iml" group="users" />
+    </modules>
+  </component>
+</project>
